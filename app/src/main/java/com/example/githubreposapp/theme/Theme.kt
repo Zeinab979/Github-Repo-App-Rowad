@@ -26,6 +26,8 @@ private val lightColorScheme = lightColorScheme(
     onBackground = light_onBackground,
     surface = light_surface,
     onSurface = light_onSurface,
+    tertiary = LightGray,
+    outline = LightGreen,
 )
 
 private val DarkColorScheme = darkColorScheme(
@@ -39,13 +41,15 @@ private val DarkColorScheme = darkColorScheme(
     onBackground = light_onBackground,
     surface = light_surface,
     onSurface = light_onSurface,
+    tertiary = LightGray,
+    outline = LightGreen
 )
 
 @Composable
 fun GithubReposAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
